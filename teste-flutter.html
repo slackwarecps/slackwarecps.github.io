@@ -1,53 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Abrir no App</title>
-    <!-- Meta tags para iOS -->
-    <meta property="al:ios:url" content="deeplinkcookbook://open/details" />
-    <meta property="al:ios:app_store_id" content="SEU_ID_NA_APP_STORE" /> <!-- Substitua pelo ID real -->
-    <meta property="al:ios:app_name" content="DeepLink Cookbook" />
-    <meta property="al:web:url" content="http://slackwarecps.github.io/details" />
-    
-    <style>
-        .app-link {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #4285F4;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-        .app-link:hover {
-            background: #3367D6;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Flutter</title>
 </head>
 <body>
-    <script>
-        function openApp() {
-            // Primeiro tenta abrir o app Android via Intent
-            window.location = "intent://open/details#Intent;scheme=deeplinkcookbook;package=com.example.deeplink_cookbook;end";
-            
-            // Fallback para iOS ou se falhar no Android
-            setTimeout(function() {
-                window.location = "http://slackwarecps.github.io/details";
-            }, 500);
-        }
-    </script>
 
-    <a href="#" onclick="openApp(); return false;" class="app-link">
-        📱 Abrir Detalhes no Aplicativo
-    </a>
+
     
-    <p style="font-size: 14px; color: #666;">
-        Não tem o app? <a href="https://play.google.com/store/apps/details?id=com.example.deeplink_cookbook" style="color: #4285F4;">Instale para Android</a>
-        ou <a href="https://apps.apple.com/app/idSEU_ID_NA_APP_STORE" style="color: #4285F4;">para iOS</a>
-    </p>
+</body>
+</html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teste Flutter | Fábio Álvaro</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Teste Flutter</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <h2>Experimentos com Flutter + WebSockets</h2>
+    <p>Esta página é reservada para demonstrações, testes e conceitos usados no TCC sobre autenticação segura em aplicações Flutter.</p>
+  
+
+    <p>Isso aqui é um teste de deep Link do Flutter</p>
+
+    <p>Link para o APP AQUI </p>
+
+
+    <a href="https://slackwarecps.github.io/deeplink_cookbook/produto/123" 
+    onclick="window.open('deeplinkcookbook://open/produto/123', '_blank'); return false;">
+    Abrir no App: Ver Produto 123
+ </a>
+
+  <footer>
+    <p>© 2025 Fábio Álvaro.</p>
+  </footer>
 </body>
 </html>
