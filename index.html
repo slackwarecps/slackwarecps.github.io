@@ -3,16 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}Slackware CPS</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Slackware CPS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    {% include header.html %}
+    <header>
+        <div class="container">
+            <h1>Slackware CPS</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-        {{ content }}
+        <section id="hero" class="container">
+            <h2>Sua Comunidade Slackware em Campinas</h2>
+            <p>Um grupo de entusiastas do Slackware Linux reunidos em Campinas e região para aprender, colaborar e promover o uso desta distribuição poderosa e flexível.</p>
+            <a href="#sobre" class="button">Saiba Mais</a>
+        </section>
+
+        <section id="sobre" class="container">
+            <h3>Sobre Nós</h3>
+            <p>O Slackware CPS nasceu da paixão por um sistema operacional que valoriza a simplicidade, a estabilidade e o controle do usuário. Somos uma comunidade aberta a todos os níveis de experiência, desde novatos curiosos até veteranos do Slackware. Nosso objetivo é criar um espaço para troca de conhecimento, suporte mútuo e desenvolvimento de projetos que beneficiem a comunidade Slackware local e além.</p>
+            <p>Se você compartilha do nosso apreço pelo Slackware ou tem interesse em conhecer mais sobre ele, junte-se a nós!</p>
+        </section>
+
+        <section id="projetos" class="container">
+            <h3>Projetos</h3>
+            <p>Aqui estão alguns dos projetos em que estamos trabalhando ou que já realizamos:</p>
+            <ul>
+                <li>Projeto Exemplo 1: Uma breve descrição do projeto.</li>
+                <li>Projeto Exemplo 2: Outra descrição interessante.</li>
+                <li>Projeto Exemplo 3: Mais detalhes sobre este projeto.</li>
+                </ul>
+            <p>Fique ligado para mais novidades e contribuições da nossa comunidade!</p>
+        </section>
+
+        <section id="contato" class="container">
+            <h3>Contato</h3>
+            <p>Entre em contato conosco através dos seguintes canais:</p>
+            <ul>
+                <li>Email: <a href="mailto:fabio.alvaro@gmail.com">fabio.alvaro@gmail.com</a></li>
+                <li>[Link para um fórum ou grupo de discussão, se houver]</li>
+                <li>[Links para redes sociais, se houver]</li>
+            </ul>
+            <p>Estamos ansiosos para ouvir você!</p>
+        </section>
     </main>
 
-    {% include footer.html %}
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Slackware CPS - Comunidade Slackware de Campinas</p>
+        </div>
+    </footer>
 </body>
 </html>
