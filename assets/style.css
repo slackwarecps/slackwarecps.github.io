@@ -46,9 +46,9 @@ body {
     align-items: center;
   }
   
-  header h1 {
-    color: #58a6ff;
-    margin: 0;
+  header .logo {
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    width: auto;
   }
   
   nav ul {
