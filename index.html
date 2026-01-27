@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <video autoplay muted loop id="bg-video">
-    <source src="assets/fabao-video.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos em HTML5.
-  </video>
+  <div id="video-container">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="assets/fabao-video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
 
   <header>
     <h1>Fábio Álvaro</h1>

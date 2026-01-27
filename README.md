@@ -3,8 +3,9 @@
 Meu site pessoal e portfólio.
 
 ## Requisitos Funcionais
-- [x] Adicionar vídeo de fundo (`assets/fabao-video.mp4`) no `index.html` para um visual dinâmico.
-- [x] O vídeo deve ser executado em loop, sem som (muted) e cobrir toda a área de fundo.
+- [x] Adicionar vídeo de fundo (`assets/fabao-video.mp4`) no `index.html` com estilo cinematográfico (estilo Bob Esponja).
+- [x] O vídeo deve ser centralizado, cobrir toda a tela (object-fit), rodar em loop e sem som.
+- [x] Implementação de overlay com gradiente radial (vinheta) para garantir legibilidade e profundidade visual.
 
 ## Como executar localmente
 Basta abrir o arquivo `index.html` em qualquer navegador ou usar um servidor local simples como `python3 -m http.server`.
