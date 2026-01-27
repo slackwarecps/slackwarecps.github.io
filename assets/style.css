@@ -1,11 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Fonte mais divertida */
     margin: 0;
-    background-color: #0e1117;
-    color: #c9d1d9;
+    background-color: #0457A0; /* Azul oceano de fundo caso o video falhe */
+    color: #FFFFFF;
     position: relative;
+    line-height: 1.6;
   }
   
+  /* --- Vídeo de Fundo --- */
   #video-container {
     position: fixed;
     top: 0;
@@ -34,80 +36,149 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay escuro para contraste */
-    background-image: radial-gradient(circle, transparent 20%, #0e1117 120%); /* Vinheta */
+    background: rgba(4, 87, 160, 0.6); /* Azul oceano semi-transparente */
+    background-image: radial-gradient(circle, transparent 20%, #0457A0 120%);
   }
   
+  /* --- Header Mobile First --- */
   header {
-    background-color: #161b22;
-    padding: 20px;
+    background-color: rgba(4, 87, 160, 0.95); /* Quase sólido para leitura */
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Empilhado no mobile */
     align-items: center;
+    gap: 15px;
+    border-bottom: 3px solid #FFF56C;
   }
   
   header .logo {
-    height: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 80px; /* Um pouco menor no mobile */
     width: auto;
   }
   
   nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centralizado no mobile */
     gap: 15px;
     margin: 0;
     padding: 0;
   }
   
   nav a {
-    color: #8b949e;
+    color: #FFF56C;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px;
   }
   
   nav a:hover {
-    color: #58a6ff;
+    color: #F69992;
+    text-shadow: 0 0 5px #FFF;
   }
   
+  /* --- Seções Gerais --- */
   section {
-    padding: 40px 20px;
-    max-width: 900px;
+    padding: 30px 20px;
+    max-width: 100%;
     margin: auto;
   }
   
   h2 {
-    color: #58a6ff;
+    color: #FFF56C;
+    text-shadow: 2px 2px 0px #0457A0;
+    border-bottom: 2px dashed #F69992;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-size: 1.8em;
   }
   
+  /* --- Skills --- */
   .skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center; /* Centralizado no mobile */
   }
   
   .skills span {
-    background-color: #21262d;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #30363d;
+    background-color: #FFF56C;
+    color: #B2783B;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid #B2783B;
+    font-weight: bold;
+    font-size: 0.9em;
   }
   
+  /* --- Projetos (Grid 1 coluna no mobile) --- */
   .projetos-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
     gap: 20px;
   }
   
   .projeto-card {
-    background-color: #161b22;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     padding: 20px;
-    border: 1px solid #30363d;
-    border-radius: 8px;
+    border: 3px solid #FFF56C;
+    border-radius: 15px;
+    transition: transform 0.2s;
+  }
+
+  .projeto-card:hover {
+    transform: scale(1.02);
+    border-color: #F69992;
+  }
+
+  .projeto-card h3 {
+    color: #FFF56C;
+    margin-top: 0;
   }
   
+  /* --- Footer --- */
   footer {
     text-align: center;
     padding: 20px;
-    background-color: #161b22;
-    color: #8b949e;
+    background-color: #0457A0;
+    color: #FFF56C;
+    border-top: 3px solid #FFF56C;
+    font-size: 0.9em;
   }
-  
+
+  a {
+    color: #F69992;
+  }
+
+  /* --- DESKTOP / TABLET (Media Queries) --- */
+  @media (min-width: 768px) {
+    header {
+      flex-direction: row; /* Volta para linha */
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    header .logo {
+      height: 100px; /* Maior no desktop */
+    }
+
+    section {
+      max-width: 900px;
+      padding: 40px 20px;
+    }
+
+    .skills {
+      justify-content: flex-start; /* Alinhado à esquerda no desktop */
+    }
+
+    .projetos-container {
+      grid-template-columns: 1fr 1fr; /* Duas colunas no desktop */
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+  }
